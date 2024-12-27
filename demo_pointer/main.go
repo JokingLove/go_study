@@ -5,11 +5,18 @@ import "fmt"
 func main() {
 	var a int = 10
 
-	fmt.Printf("变量的地址： %x \n", &a)
-	demo2()
+	// fmt.Printf("变量的地址： %x \n", &a)
+	// demo2()
 
-	println("-=--------")
-	demo3()
+	// println("-=--------")
+	// demo3()
+	var p = &a
+
+	fmt.Println(fn1(p))
+}
+
+func fn1(*a int) int {
+	return a
 }
 
 func demo2() {
